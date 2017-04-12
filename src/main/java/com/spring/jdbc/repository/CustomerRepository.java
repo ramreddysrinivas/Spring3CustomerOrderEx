@@ -18,10 +18,6 @@ public class CustomerRepository implements ICustomerRepository {
 	@Autowired
 	private DataBaceConnection dataBaceConnection;
 
-	/*public DataBaceConnection getDataBaceConnection() {
-		return dataBaceConnection;
-	}*/
-
 	@Override
 	public String saveCustomer(Customer customer) {
 		String message =null;
@@ -45,9 +41,7 @@ public class CustomerRepository implements ICustomerRepository {
 			} catch (SQLException e) {
 				message= "Exception occured while closing resources ";
 			}
-			
 		}
-	
 		return message;
 	}
 

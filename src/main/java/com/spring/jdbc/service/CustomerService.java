@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.spring.jdbc.domain.Customer;
@@ -13,7 +12,6 @@ import com.spring.jdbc.repository.ICustomerRepository;
 
 @Service
 public class CustomerService implements ICustomerService {
-
 	
 	@Autowired
 	private ICustomerRepository customerRepository;
@@ -21,7 +19,6 @@ public class CustomerService implements ICustomerService {
 	public ICustomerRepository getCustomerRepository() {
 		return customerRepository;
 	}
-	
 	
 	@Override
 	public String saveCustomer(Customer customer) throws InvalidInputException {
